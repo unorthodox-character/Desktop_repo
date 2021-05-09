@@ -1,0 +1,4 @@
+-Kubectl cli: for configuring the Minikube cluster
+-Minikube cli: for start up/deleting the cluster
+
+

@@ -1,0 +1,31 @@
+-explain about your CV:
+	-my cv does not show  the whole picture
+	-explain them about your 2 years career and how you started to learn linux and networking, rhcsa, rhce
+	-virtualization(vmware),monitoring (prtg), dns etc
+	-CH (could not learn more because senior did it, first ma may be because I was a beginner bt still did not get enough chances) and Lama Estate(I was the only IT person who took care of all the websites about 12, all the employees workstations, servers, migration to azure and even provide some level of IT support abroad) but (administration issue ) why I changed company
+	-in between changing companies I had time and I utilised it trying to discover my interest
+		-tried programming,(python) oop, basic backend development(django) and touched basic data science modules(numpy, pandas, matplotlib, seaborn etc)
+		-tried to make a game, tried to make a basic machine learning project to find out if a sentence is true or false (Naive Base)
+		-discovered selenium automationi:
+			-hamro bazaar byk deal scooter, certain km ran, certain price range (using script)
+			-or wishing happy birthday, annivarsary  to a friend in fb (again using script and webscraping)
+			-changing router password every day(as a precaution of being hacked 
+biggest mistake (not pushing the code you learned in git because I was doing it for fun and thought if I can do it now then I can do it anytime in future)
+
+			-explain how you got practical idea about the difference between vmware and docker
+			-difference between sysadmin and developers skills (github url)	
+		-that is how  I discovered devops (explain about devops and selflearned skills in cv)
+		
+		-ubuntu, arch , lightweight, difference between them (repository, gdm, file explorer(thunar), ppa, )
+			-why ubuntu more for beginner, and arch more advanced (RAM utilization, install everything yourself in arch
+and almost all pre-installed in ubuntu)... explain your multiple desktop problems with arch (nvidia driver)
+		
+
+		-currently involved in two prjects (software project), trying to work as a devops Er separately,work as a devops/system admin in Tech Rida(ERP project) and  trying to re-call python and automation when free and troubleshooting docker and jenkins
+
+-another big mistake getting obsessed at one technology and completely not touching previously learned tech
+			-explain about the probem faced while setting up jenkins for one of the project 
+		-future learning plans (kubernates, terraform, aws, database)
+
+
+ask for permission if i could type down the questions that I am not ablt to answer (for learning purpose)

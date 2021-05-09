@@ -1,0 +1,3 @@
+frontend:  react redux
+backend : steam related backend (nodejs) ... authentication... 
+	: django, 

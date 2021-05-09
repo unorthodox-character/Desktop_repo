@@ -1,0 +1,2 @@
+if there are lots of environment variable, you can define it in a file and give its path on the docker-compose.yml file.
+

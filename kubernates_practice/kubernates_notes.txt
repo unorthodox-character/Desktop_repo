@@ -1,0 +1,4 @@
+kubernetes architecture
+-Node: contains DOCKER engine(container run time), KUBELET( for starting, stopping, and managind individual containers) and KUBE-PROXY (for networking and load balancing)
+-Master Node: API server(provides JSON over HTTP API), SCHEDULER(selects node to run container), CONTROLLER MANAGER(detects container state{alive, dead})
+-

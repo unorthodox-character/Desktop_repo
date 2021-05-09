@@ -1,0 +1,7 @@
+-BREAK statement breaks out of the innnermost enclosing FOR or WHILE loop
+-CONTINUE statement escapes the next line of code and continues with the next iteration
+-'non default argument' should not follow 'default-argument'
+-4 spaces indentation, blank lines to separate functions and classes, UpperCamelCase for classes and lowercase with underscores for methods and functions.
+-variable assigned to mutable values like lists contain the REFERENCE to the value(not the value) thats y...
+-deep copy is used to make another copy of the mutable data types which is opposite of above point 
+-[1,2,3] is NOT EQUAL to [3,2,1] but {'name':'ankit', 'age':28} is EQUAL to {'age':28, 'name':'ankit'}
