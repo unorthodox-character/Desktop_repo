@@ -1,4 +1,7 @@
 -Kubectl cli: for configuring the Minikube cluster
 -Minikube cli: for start up/deleting the cluster
 
+OVERVIEW OF KUBERNETES CONFIGURATION FILE ()
+-Divided into 3 parts(metadata, specification, status{automaticly and continuously onto etcd})
+-template is the configuration file inside a configuration file
 

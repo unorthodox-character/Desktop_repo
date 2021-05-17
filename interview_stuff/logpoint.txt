@@ -1,5 +1,50 @@
--worked in two companies but left due to lack of learning opportunities.
--
--learned more in last one year than the previous two by being technically unemployed
+Obviusly you have my CV now let me xplain what is not written in the CV
+Completly honest,
+about a year ago , I resigned from work , it was my second office. and since then
+I have not worked or signed a contract for about a year. let me explain y?
+Why leave previous company?
+becoz I felt  : “Lack of enough learning opportunities” or professional growth!!
+ turns out I was right. how? because I found out(system admin skills on internet) after resigning from previous companies I lacked a lot of skills and decided to work on it. (skills like loadbalancing, apache, nginx etc)
+
+ I decided not to apply for jobs straight away but develop some skills and thats how I found that sys admin is slowly being depricated and devops has been and will be the next big thing in operations. 
+
+and this is how I started ....talk about basic python...and slowly got interested in data science libraries like numpy, pandas, matplotlib, i discovered  selenium(web driver, gecko driver), writing a script to scrape web and ring data, tried to learn little  data structures, linked list, circular list, and even tried basic back end framework, django(MVC) how without touching the database it used to write on it using model.  
+
+This was the time that I formatted ubuntu and installed Arch.. and learned about the imp of git coz all my codes were gone. 
+shlowly I shift my focus to git bcoz I figured version control is not just to store but to collaborate , thats y i started using git (git init, clone, add, commit, push, merge, stash etc
+CI/CD tool :there were many but Open Source is the best that s y Jenkins(ci cd pipeline, if possible show jenkinsfile)
+deployment tool: Docker(dockerfile, docker-compose, show file)
+ 
+ there were days when i spend just by trouble shooting for exaple arch with dual monitors, arch wiki, configuring nvidia driver for hdmi to vga controller, optirun, bumblebee in arch wiki, installing docs specified 3rd party nvidia driver and what not 
+lightweight=> ubuntu and arch  
+
+Why m telling all these things more specifically about the last year is because i wanted to make two things clear
+no. 1 is:
+No platform, no incentive, no guidance etc etc what you get in a company... for a year but still I managed to learned all these things by my own, now i think if i get all thise things, maybe i can push myself a little more  
+no 2:
+My mistake!!
+explain...how u  forgot (doing one thing for a month and shifting....)!!!
+Bt does not matter ... the main point is m studying it again whether its python or git which  i think shows persisence and learn from mistake(not repeat the mistake of completely leaving) and i guess that shows my mentality , how i approach to setbacks 
+
+to conclude:
+i kno i still lack a lot of things but wht i do not lack is the mental attitude to learn and that is the most imp thing that i’ve learned from last year.
+and i think I can say that
+"i learned the most in one year than the past 2 previous years combined"
+
+end
+
+What was my approach to learning a new topic?
+All these things i learned by visiting sites like quora, reddit. Finding out how people approached it and then try it myself, trying out locally, troubleshooting, stack overflow etc
+
+
+extra: 
+About ur hobby, technology enthusiast, read books to grow as a person everyday
+Trying to learn Kubernetes 
+Guru99, Geekforgeek, medium, python docs, docker docs etc
+Chrome and youtube history
+
+why logpoint?
+top 3 company,  best SIEM solution provider
+personally, I just want to learn from the people who have a lot more experience than me and discover other aspects of this technology field
 
 

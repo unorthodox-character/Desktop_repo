@@ -1,0 +1,7 @@
+ps
+htop
+top
+ps -aux
+
+chmod 
+

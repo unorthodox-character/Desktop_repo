@@ -1,0 +1,5 @@
+print('enter a sentence and I\'ll find you any word inside it' )
+sent = input()
+sent1 = input()
+pq = sent.find(sent1)
+print(pq)

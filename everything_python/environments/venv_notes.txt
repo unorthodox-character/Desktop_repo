@@ -1,0 +1,4 @@
+-the prefix lets us know that 'my_env' venv is currently acitive meaning that when we create programs here they will use only this particular environment’s settings and packages.
+-Note: Within the virtual environment, you can use the command python instead of python3, and pip instead of pip3 if you would prefer. If you use Python 3 on your machine outside of an environment, you will need to use the python3 and pip3 commands exclusively.
+-source my_env/bin/activate (activating my_env venv)
+-deactivate (deactivating the currently running venv)

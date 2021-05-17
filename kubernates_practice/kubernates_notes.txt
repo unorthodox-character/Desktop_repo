@@ -1,4 +1,20 @@
 kubernetes architecture
 -Node: contains DOCKER engine(container run time), KUBELET( for starting, stopping, and managind individual containers) and KUBE-PROXY (for networking and load balancing)
 -Master Node: API server(provides JSON over HTTP API), SCHEDULER(selects node to run container), CONTROLLER MANAGER(detects container state{alive, dead})
--
+
+-Namespace(logical catagorization of one cluster into many cluster)
+	
+	-main advantage: database, logs, web etc are catagorised into their own namespace therefore organised in a managed way.
+	-also reduces chances of over-writing
+	-resource sharing(staging and development both share log and nginx cluster) without the need for a separate cluster
+	-providing access to only one cluster for a particulat team hence providing isolated environment.
+	-limit cpu, ram, storage per namespace
+
+	-disadvantage: two clusters should have two identical config map
+   -some are globally accessible i.e. they cannot be bounded by a namespace like volumes and nodes
+	-to avoid mentioning flag -n <ur namespace>, kubectx can be installed to make ur particular namespace as default
+
+-Ingress:the url written in the browser is reirected towards ingress and then tothe service and finally to the pod.
+-Ingress Controller: another pod that evaluates and processes ingress rule and hence manage redirection.
+
+
