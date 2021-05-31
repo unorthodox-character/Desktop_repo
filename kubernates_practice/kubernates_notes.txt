@@ -16,5 +16,39 @@ kubernetes architecture
 
 -Ingress:the url written in the browser is reirected towards ingress and then tothe service and finally to the pod.
 -Ingress Controller: another pod that evaluates and processes ingress rule and hence manage redirection.
-
+	Explaining a sample kubernetes yaml file:
+-apiVersion specifies the API endpoint on the API  server which we want to connect to
+-the "kind" requirefield can be pod, replicaset, namespace, service etx
+-metadata holds the objects' basic information
+-Pods are created using the Pod template defined in spec.template
+-the desired state of the Pod is written in spec.template.spec which is created using docker container and docker hub
+	Pods
+-pods are the logical collection of one or more containers whihc share the same network namespace(ip address),
+	-have access to mount the same external storage(volumes)
+	Labels
+-Labels are key value pairs attached to Kubernetes objects(Pods, ReplicaSets, nodes, namespace, volume) which is used to logically group together those objects.
+	Deployment
+-when rolling update is completed, it will show both ReplicaSets(A and B) where A is scaled to 0 and B is scaled to 3 pods. and this is how Deployment records its prior state configuration settings as Revisions.
+	-and that is how rollback is possible.
+	endpoint
+-socket (ip address with port number)
+	Namespaces
+-to partition one cluster into virtual sub-clusters so that it will be easy to use the same cluster by multiple users.
+-kube-system: contains the object (control-plane agents) created by kubernetes system.
+-default namespace contains objects and resources created by administrators and developers
+-kube-public is used for exposing public information about the cluster.
+-kube-node-lease holds node lease objects used for node heartbeat data.
+	service
+-logically groups Pods and defines a policy to access them via labels and selectors
+	kube-PROXY
+-a daemon working on every node that watches the API server on the master node for the addition, updates, and removal of Services and endpoints.
+	KUBELET
+-its a process watcher that makes sure the given containers are all running.
+	clusterIP
+-service receives a virtual ip address known as cluster IP which is used for communicating with the service and is accessible only from within the cluster.
+	NodePort
+-Service is accessible from the external world.
+	Loadbalancer
+-NodePort and ClusterIP are automatically created and the external load balancer will route to them
+-the service is exposed externally using the underlying clouder provider's load balancer
 

@@ -1,0 +1,61 @@
+-developed because of apache concurrency problems
+-mitigates this issue by spawning worker processes of which each can handle thousands of connections.
+-decoupling actual work from connectionajd allow itself with a connection only when a new event has been 
+triggered
+-faster in static content delivery while staying relatively lighter on resources because it doesnt embed a 
+dynamic programming language
+-if dynamic programming language required, then nginx delegates the tasks to separate processes as php-fpm
+or node.js or python that responses back to the client
+    
+-simple directive are terminated by semicolons like listen, return etc
+-block directives end with curly braces {} 
+-block directive capable of containing other directives inside is called a context like events, https etc
+    -events{} context is usef for setting global configuration ofor handling requests on a general level
+    -http{} context is used to handle http and https requests.
+    -server{} context is inside http which is used for configuring virtual servers within a single host.
+        -one server = one virtual host
+    -main{} anything not written in above is written in main.. idk what this means!!!
+
+-/srv directory is meant to contain site-specific data which is served by this system
+-root directive is used to point the site specific directory which is inside /srv directory
+-types directive is used for configuring file type like plaintext, html and css
+-include directive allows us to include content from other configuration file like mime.types 
+-location mantches any uri starting with agatha 
+    -ie. http://nginx-handbook.test/agatha and http://nginx-handbook.test/agatha-christie gives same responses
+    -also calle prefix mantches
+-location = performs exact matche i.e. /agatha and /agatha-christie does not respond the same 
+-location ~ to perform regex match and is case sensitive
+-location ~* to make it case insensitive
+-set directive used for declaring new variables
+
+-redirect: url changes from /about_page to about.htm 
+-rewrite: url does not change but content changes to about.html
+-try_files displays the files (if exists) and displays error msg if does not exist and does not display the 
+    actual page 
+-try_files using $uri solves the above problem by displaying the index at first and if the request file 
+    does not exit then only displays the error message but problem: the url server root returns error
+-try_files $uri $uri/ solves this error by searching for the uri first and if not found then search 
+    requested uri as a directory
+
+-access_log <path> or off or / directive logs into the file metnioned in the <path>, not log, default resp.
+-error, crit, alert, emerg: are the error msgs thats needs to be addressed
+    Reverse Proxy: 
+        -(nginx)sits in between client and backend and therefore directs requests send by client
+    to appropriate backend server which ensures the smooth flow of network traffic.
+        -can be used as a load balancer, increased security(through ssl and protection for backend server)
+    Difference between a proxy and a reverse proxy:
+        -proxy sits in front of client but reverse proxy sits in front of servers
+        -its like proxy acts like a protection for clients whereas reverse proxy acts as a protection for
+        backend server
+
+-proxy_http_version directive sets the http version for the server
+-proxy_set_header directive is used for setting a header on the backend 
+    -proxy_set_header Upgrade $http_upgrade  passes the value of the $http_pugrade variable as a header 
+    named Upgrade
+
+    php project
+    -index index.php: uses indes.php file as root
+    -fastcgi_param REQUEST_METHOD $request_method; passes the request method to the back-end
+    -fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name; line passes the exact location of
+     the PHP script to run.
+
