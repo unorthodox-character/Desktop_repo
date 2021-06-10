@@ -59,3 +59,15 @@ or node.js or python that responses back to the client
     -fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name; line passes the exact location of
      the PHP script to run.
 
+     loadbalancer
+-upstream context is used for collecting a group of backend server and treat them as a singly entity
+-proxy_pass directive is used to point to the upstream context(as a whole) and nginx will balance the load
+-master process: to read and evaluate configuration and maintain worker processes.
+-worker_process: responsible for actual processing for requests
+    -this directive is written in the main context and is responsible for setting the number of worker
+processes to spawn
+-worker_connection: highest no. of connections a single worker process can handle
+    -no. of files O.S. is allowed to open per core 
+    -ulimit -n 
+    
+
