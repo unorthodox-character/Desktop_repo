@@ -1,0 +1,102 @@
+---
+
+- hosts: web_servers
+  become: true
+  #gather_facts: no
+  tasks:
+  - name: install unzip
+    tags: terraform
+    apt:
+      name: unzip
+      
+  - name: install terraform
+    tags: terraform
+    unarchive:
+      src: https://releases.hashicorp.com/terraform/1.0.1/terraform_1.0.1_linux_amd64.zip
+      dest: /usr/local/bin
+      remote_src: yes
+      owner: root
+      group: root
+      mode: 0755
+
+  - name: install apache and php package for web servers
+    tags: apache, apache2, php, ubuntu 
+    apt:
+      name:
+        - apache2 
+        - libapache2-mod-php
+      state: latest
+      update_cache: yes
+    when: ansible_distribution == "Ubuntu"
+  - name: copy some file from this laptop to two vms in vagrant
+    tags: copy
+    copy: 
+      src: Vagrantfile
+      dest: /home/vagrant/Vagrantfile
+      owner: root
+      group: root
+      mode: 0644
+
+- hosts: all
+  become: true
+  tasks: 
+  - name: create user ankit
+    tags: ankit
+    user:
+      name: ankit
+      group: root
+  - name: make ankit a sudoers user
+    tags: ankit
+    copy:
+      src: sudoer_ankit
+      dest: /etc/sudoers.d/ankit
+      #remote_src: yes
+      owner: root
+      group: root
+      mode: 0440
+  - name: add ssh key for ankit
+    tags: ankit
+    authorized_key:
+      user: ankit
+      key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP/2QHyH5yFrKIAVSy9gJNYgYRthKV1qhnO6hy8uI/zg ansible" 
+      state: present
+      
+    
+
+- hosts: db_servers
+  become: true
+  tasks:
+
+  - name: install mariadb package for Ubuntu
+    tags: mariadb, mariadb-server, ubuntu
+    apt:
+      name:
+        - mariadb-server
+      state: latest
+      update_cache: yes
+    when: ansible_distribution == "Ubuntu"
+
+  - name: install mariadb package for CentOS
+    yum:
+      name:
+      tags: mariadb, mariadb, centos
+        - mariadb
+      state: latest
+      update_cache: yes
+    when: ansible_distribution == "CentOS"
+
+  - name: install httpd for CentOS db_server
+    tags: httpd,CentOS
+    yum:
+      name: httpd
+      state: latest
+    when: ansible_distribution == "CentOS"
+  
+  - name: start httpd service in CentOS
+    tags: httpd, CentOS
+    service:
+      name: httpd
+      state: started
+      enabled: yes
+    when: ansible_distribution == "CentOS"
+
