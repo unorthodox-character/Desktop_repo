@@ -21,20 +21,4 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do | config |
         app.vm.box_version = "7.0"
         app.vm.network :private_network, ip: "192.168.10.2"
     end
-
-    #Database server.
-    config.vm.define "db" do |db|
-        db.vm.hostname = "orc-db.dev"
-        db.vm.box = "GospodinovM/ubuntu-20.04-minimal"
-        db.vm.box_version = "0.0.2"
-        db.vm.network :private_network, ip: "192.168.10.3"
-        db.ssh.forward_agent = true
-    end
-
-    config.vm.define "cb" do |db|
-        db.vm.hostname = "orc-cb.dev"
-        db.vm.box = "GospodinovM/ubuntu-20.04-minimal"
-        db.vm.box_version = "0.0.2"
-        db.vm.network :private_network, ip: "192.168.10.5"
-    end
 end
