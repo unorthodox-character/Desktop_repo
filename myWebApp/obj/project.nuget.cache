@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "CqUzd0SxfVf0+Wkw0B0Qna+WiRyT9gBMt/18K610t1/4YAEjmDqb4UczGv5KPybay1vzqib9pBEbnOngbMlqGQ==",
+  "success": true,
+  "projectFilePath": "/home/ankit/myWebApp/myWebApp.csproj",
+  "expectedPackageFiles": [
+    "/home/ankit/.nuget/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
