@@ -1,0 +1,10 @@
+- name: add global user ankit 
+  user:
+    name: ankit
+    state: present
+- name: add ankit sudoers file
+  sudoers:
+  src:
+  dest:
+  owner:
+  group: 

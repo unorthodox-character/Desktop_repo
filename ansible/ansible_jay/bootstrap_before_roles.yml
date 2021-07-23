@@ -1,0 +1,22 @@
+---
+- hosts: all
+  become: true
+  #tags: ankit
+  tasks: 
+  - name: create global user ankit
+    user:
+      name: ankit
+      groups: root
+  - name: add ssh key for ankit
+    authorized_key:
+      user: ankit
+      state: present
+      key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFXwk2zVCmsjpHiHgen/7jV74olAa286fhChmQGJespu ansible"
+  - name: adding sudoers file for ankit
+    copy:
+      src: sudoer_ankit
+      dest: /etc/sudoers.d/ankit
+      owner: root
+      group: root
+      #remote_src: no
+      mode: 0440

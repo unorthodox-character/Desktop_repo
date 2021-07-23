@@ -1,0 +1,4 @@
+- name: add ssh key for ankit
+  authorized_key:
+    user: ankit
+    key: "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFXwk2zVCmsjpHiHgen/7jV74olAa286fhChmQGJespu ansible"

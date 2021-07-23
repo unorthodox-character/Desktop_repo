@@ -1,0 +1,12 @@
+- name: install mariadb package for CentOS
+  yum: 
+    name: {{ "mariadb_package_CentOS" }}
+    state: present
+  when: ansible_distribution=="CentOS"
+- name: install mariadb package for Ubuntu
+  yum: 
+    name: {{ "mariadb_package_ubuntu" }}
+    state: present
+  when: ansible_distribution=="Ubuntu"
+
+  

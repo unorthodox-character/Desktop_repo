@@ -1,0 +1,16 @@
+- name: install apache (for centOS)
+  yum: 
+    - name: {{ "apache_package_centos" }}
+      state: present
+  notify: restart_apache
+  when: ansible_distribution=="CentOS"
+- name: install apache (for Ubuntu)
+  apt: 
+    - name: {{ "apache_package_ubuntu" }}
+      state: present
+  when: ansible_distribution=="Ubuntu"
+- name: start apache service(CentOS)
+  service:
+    - name: httpd
+      state: start
+  when: ansible_distribution=="CentOS"
